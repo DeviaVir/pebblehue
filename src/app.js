@@ -141,7 +141,7 @@ function lightsSelector() {
 
 function usernameSelector() {
   var usernameUrl = 'http://' + base + '/api';
-  var data = '{"devicetype": "pebble#hue"}';
+  var data = '{"devicetype": "pebble#hue' + Pebble.getWatchToken() + '"}';
   
   // Create the request
   var request = new XMLHttpRequest();
