@@ -36,6 +36,12 @@ var retryCard = new UI.Card({
   bodyColor: 'black'
 });
 
+function disconnect() {
+  localStorage.setItem('base', '');
+  localStorage.setItem('username', '');
+  baseSelector();  
+}
+
 function actionSelector(id) {
   actionRequest(id);
 }
@@ -105,6 +111,10 @@ function lightsSelector() {
         title: 'ALL OFF',
         id: 'ALLOFF'
       });
+      items.push({
+        title: 'DISCONNECT',
+        id: 'DISCONNECT'
+      });
 
       // Construct Menu to show to user
       var resultsMenu = new UI.Menu({
@@ -129,6 +139,9 @@ function lightsSelector() {
             lightsRequest(ids[i], false);
           }
         }
+        else if(myId === 'DISCONNECT') {
+          disconnect();
+        }
         else {
           actionSelector(myId);
         }
@@ -141,7 +154,7 @@ function lightsSelector() {
 
 function usernameSelector() {
   var usernameUrl = 'http://' + base + '/api';
-  var data = '{"devicetype": "pebble#hue' + Pebble.getWatchToken() + '"}';
+  var data = '{"devicetype": "pebble#hue"}';
   
   // Create the request
   var request = new XMLHttpRequest();
