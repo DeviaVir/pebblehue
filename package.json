@@ -20,7 +20,7 @@
             "chalk",
             "diorite"
         ],
-        "uuid": "5436f5b6-2a1b-4cc3-85b0-f97bfa8a4e54",
+	"uuid": "576c172f-ed85-4027-91df-eb5575e32a15",
         "watchapp": {
             "watchface": false
         }
