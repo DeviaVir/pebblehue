@@ -1,0 +1,29 @@
+{
+    "author": "chase@sillevis.net",
+    "dependencies": {
+        "pebblejs": "1.0.0"
+    },
+    "keywords": [],
+    "name": "pebblehue",
+    "pebble": {
+        "displayName": "Pebblehue",
+        "enableMultiJS": true,
+        "messageKeys": [],
+        "projectType": "native",
+        "resources": {
+            "media": []
+        },
+        "sdkVersion": "3",
+        "targetPlatforms": [
+            "aplite",
+            "basalt",
+            "chalk",
+            "diorite"
+        ],
+        "uuid": "576c172f-ed85-4027-91df-eb5575e32a15",
+        "watchapp": {
+            "watchface": false
+        }
+    },
+    "version": "1.1.0"
+}
