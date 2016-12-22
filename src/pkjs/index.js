@@ -1,4 +1,4 @@
-var UI = require('ui');
+var UI = require('pebblejs/ui');
 
 var base = localStorage.getItem('base');
 var username = localStorage.getItem('username');
